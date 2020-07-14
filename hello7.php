@@ -9,6 +9,7 @@ $result = '';
 #連想配列
 #foreach( $配列 as $ キー => $値)
 foreach($data as $key => $val){
-    $result .= $key ." : " . $val . "\n";    
+    $result .= $key ." : " . $val . "\n";
+    #.= とは、+=に似た演算子のこと    
 }
 echo $result;
