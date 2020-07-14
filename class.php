@@ -19,8 +19,13 @@ class Hello {
     }
 }
 
+#クラスを使うにはインスタンスの作成が必要
 $hello1 = new Hello();
+#プロパティに値を設定する
 $hello1 ->name = "Taro";
+#メソッドを呼び出す
+$hello1 -> say();
+
 $hello2 = new Hello();
 $hello2 ->name = "hanako";
 $hello2 ->say();
