@@ -1,5 +1,7 @@
 <?php
-#クラスの書き方
+#コンストラクタを使ったクラスの書き方
+#メリット：インスタンスを作るときに一緒にnameの値を引数として渡す
+
 #class クラス{
     #var $変数;
     #...必要なだけ記述...
@@ -20,18 +22,17 @@
 class Hello {
     var $name = "no-name";
 
-    function say(){
+    public function __construct($name) {
+        $this->name = $name;
+    }
+
+    function say() {
         echo "Hello, " . $this->name . "!\n";
     }
 }
 
-#クラスを使うにはインスタンスの作成が必要
-$hello1 = new Hello();
-#プロパティに値を設定する
-$hello1 ->name = "Taro";
-#メソッドを呼び出す
+$hello1 = new Hello("Taro");
 $hello1 -> say();
 
-$hello2 = new Hello();
-$hello2 ->name = "hanako";
+$hello2 = new Hello("Hanako");
 $hello2 ->say();
